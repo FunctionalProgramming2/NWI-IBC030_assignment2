@@ -9,7 +9,7 @@ minimum [2, 7, 1, 9, 6, 5]
 {definition of minimum}
 = head $ insertionSort [2, 7, 1, 9, 6, 5]
 {definition of insertionSort}
-= head $ insert $ insertionSort [7, 1, 9, 6, 5]
+= head $ insert 2 $ insertionSort [7, 1, 9, 6, 5]
 {6x definition of insertionSort}
 = head $ insert 2 $ insert 7 $ ... $ insert 5 []
 {definition of insert}
