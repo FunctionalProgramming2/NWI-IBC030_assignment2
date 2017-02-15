@@ -37,6 +37,11 @@ author: Hendrik Werner s4549775
 exercise 4.1
 ============
 
+> moves :: Position -> [Position]
+> moves (a, b) = (splits a) ++ (splits b)
+>     where splits a = [(a - x, x) | x <- [1..half a]]
+>           half a = a `div` 2
+
 exercise 4.2
 ============
 
