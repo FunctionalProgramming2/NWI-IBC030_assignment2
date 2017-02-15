@@ -30,3 +30,33 @@ Multiway trees.
 
 < maximize  ∷ (position → Value) → (Tree position → Value)
 < minimize  ∷ (position → Value) → (Tree position → Value)
+
+--------------------------------------------------------------------------------
+author: Hendrik Werner s4549775
+
+exercise 4.1
+============
+
+exercise 4.2
+============
+
+exercise 4.3
+============
+
+exercise 4.4
+============
+
+exercise 4.5
+============
+
+exercise 4.6
+============
+
+exercise 4.7
+============
+
+exercise 4.8
+============
+
+exercise 4.9
+============
