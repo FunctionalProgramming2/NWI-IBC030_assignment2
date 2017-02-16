@@ -51,6 +51,14 @@ exercise 2.1
 exercise 2.2
 ============
 
+> instance (Num elem) => Num (Stream elem) where
+>  (+) sa sb = zip (Prelude.+) sa sb
+>  (*) sa sb = zip (Prelude.*) sa sb
+>  abs s = map (Prelude.abs) s
+>  signum s = map (Prelude.signum) s
+>  fromInteger s = Prelude.fromInteger s
+>  negate s = map (Prelude.negate) s
+
 exercise 2.3
 ============
 
