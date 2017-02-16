@@ -51,6 +51,9 @@ exercise 4.2
 exercise 4.3
 ============
 
+> size ∷ Tree elem → Integer
+> size (Node a ts) = (+1) $ sum $ map size ts
+
 exercise 4.4
 ============
 
