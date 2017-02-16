@@ -45,9 +45,6 @@ exercise 4.1
 exercise 4.2
 ============
 
-> gametree :: (position -> [position]) -> (position -> Tree position)
-> gametree moves pos = Node pos $ map (gametree moves) (moves pos)
-
 exercise 4.3
 ============
 
