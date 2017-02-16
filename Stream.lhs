@@ -36,7 +36,7 @@
 --------------------------------------------------------------------------------
 author: Hendrik Werner s4549775
 
-exercise 2.1
+exercise 3.1
 ============
 
 > repeat :: a -> Stream a
@@ -48,7 +48,7 @@ exercise 2.1
 > zip :: (a -> b -> c) -> (Stream a -> Stream b -> Stream c)
 > zip f sa sb = f (head sa) (head sb) ≺ zip f (tail sa) (tail sb)
 
-exercise 2.2
+exercise 3.2
 ============
 
 > instance (Num elem) => Num (Stream elem) where
@@ -59,8 +59,8 @@ exercise 2.2
 >  fromInteger s = Prelude.fromInteger s
 >  negate s = map (Prelude.negate) s
 
-exercise 2.3
+exercise 3.3
 ============
 
-exercise 2.4
+exercise 3.4
 ============
