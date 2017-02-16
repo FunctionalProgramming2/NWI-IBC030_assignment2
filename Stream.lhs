@@ -62,5 +62,17 @@ exercise 3.2
 exercise 3.3
 ============
 
+> take :: Integer -> Stream elem -> [elem]
+> take 0 _ = []
+> take n (Cons x xs) = x : (take (n-1) xs)
+
 exercise 3.4
 ============
+
+
+> diff :: (Num elem) => Stream elem -> Stream elem
+> diff s  =  tail s - s
+
+> sum :: (Num elem) => Stream elem -> Stream elem
+> sum s = Cons 0 (sm 0 s) where
+> 		sm n (Cons h t) = Cons m (sm m t) where m = n + h	
