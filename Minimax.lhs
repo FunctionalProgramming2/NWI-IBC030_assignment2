@@ -102,6 +102,14 @@ exercise 4.8
 exercise 4.9
 ============
 
+> maximize :: (position -> Value) -> (Tree position -> Value)
+> maximize evaluator (Node a []) = evaluator a
+> maximize evaluator (Node _ ts) = maximum $ map (minimize evaluator) ts
+
+> minimize :: (position -> Value) -> (Tree position -> Value)
+> minimize evaluator (Node a []) = negate $ evaluator a
+> minimize evaluator (Node _ ts) = minimum $ map (maximize evaluator) ts
+
 exercise 4.10
 =============
 (optional)
