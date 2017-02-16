@@ -84,6 +84,13 @@ exercise 4.6
 exercise 4.7
 ============
 
+> prune :: Integer -> Tree elem -> Tree elem
+> prune 0 (Node a _) = (Node a [])
+> prune depth (Node a ts) = Node a $ map (prn 1) ts
+>     where prn current n@(Node a ts)
+>               | current < depth = Node a $ map (prn (current + 1)) ts
+>               | otherwise = Node a []
+
 exercise 4.8
 ============
 
