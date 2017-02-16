@@ -14,15 +14,11 @@
 > from ∷ Integer → Stream Integer
 > from n = n ≺ from (n + 1)
 
-> repeat  ::  a -> Stream a
-> repeat  a = a ≺ repeat a
+< repeat ::  a -> Stream a
 
-> map     :: (a -> b) -> (Stream a -> Stream b)
-> map f s = f (head s) ≺ map f (tail s)
+< map:: (a -> b) -> (Stream a -> Stream b)
 
-> zip     :: (a -> b -> c) -> (Stream a -> Stream b -> Stream c)
-> zip f sa sb = f (head sa) (head sb) ≺ zip f (tail sa) (tail sb)
-
+< zi :: (a -> b -> c) -> (Stream a -> Stream b -> Stream c)
 
 < instance (Num elem) ⇒ Num (Stream elem) where
 
@@ -42,6 +38,15 @@ author: Hendrik Werner s4549775
 
 exercise 2.1
 ============
+
+> repeat :: a -> Stream a
+> repeat a = a ≺ repeat a
+
+> map :: (a -> b) -> (Stream a -> Stream b)
+> map f s = f (head s) ≺ map f (tail s)
+
+> zip :: (a -> b -> c) -> (Stream a -> Stream b -> Stream c)
+> zip f sa sb = f (head sa) (head sb) ≺ zip f (tail sa) (tail sb)
 
 exercise 2.2
 ============
