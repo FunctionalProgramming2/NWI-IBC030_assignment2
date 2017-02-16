@@ -16,9 +16,9 @@
 
 < repeat ::  a -> Stream a
 
-< map:: (a -> b) -> (Stream a -> Stream b)
+< map :: (a -> b) -> (Stream a -> Stream b)
 
-< zi :: (a -> b -> c) -> (Stream a -> Stream b -> Stream c)
+< zip :: (a -> b -> c) -> (Stream a -> Stream b -> Stream c)
 
 < instance (Num elem) ⇒ Num (Stream elem) where
 
