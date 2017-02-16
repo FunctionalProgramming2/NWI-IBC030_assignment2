@@ -5,7 +5,7 @@
 > import Prelude hiding (head, tail, repeat, map, zip, take, sum)
 > -- import Unicode
 
-> data Stream elem  =  Cons { head ∷ elem, tail ∷ Stream elem }
+> data Stream elem  =  Cons { head :: elem, tail :: Stream elem }
 >
 > infixr 5 ≺
 > (≺)    ∷  elem → Stream elem → Stream elem
@@ -14,9 +14,15 @@
 > from ∷ Integer → Stream Integer
 > from n = n ≺ from (n + 1)
 
-< repeat  ∷  a → Stream a
-< map     ∷  (a → b) → (Stream a → Stream b)
-< zip     ∷  (a → b → c) → (Stream a → Stream b → Stream c)
+> repeat  ::  a -> Stream a
+> repeat  a = a ≺ repeat a
+
+> map     :: (a -> b) -> (Stream a -> Stream b)
+> map f s = f (head s) ≺ map f (tail s)
+
+> zip     :: (a -> b -> c) -> (Stream a -> Stream b -> Stream c)
+> zip f sa sb = f (head sa) (head sb) ≺ zip f (tail sa) (tail sb)
+
 
 < instance (Num elem) ⇒ Num (Stream elem) where
 
