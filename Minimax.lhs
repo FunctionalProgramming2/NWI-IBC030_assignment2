@@ -57,6 +57,10 @@ exercise 4.3
 exercise 4.4
 ============
 
+> winning, losing :: Tree position -> Bool
+> winning (Node a ts) = or $ map losing ts
+> losing (Node a ts) = and $ map winning ts
+
 exercise 4.5
 ============
 (optional)
