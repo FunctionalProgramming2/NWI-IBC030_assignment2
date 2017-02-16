@@ -53,6 +53,7 @@ exercise 4.4
 
 exercise 4.5
 ============
+(optional)
 
 This is an application of De Morgan's Laws
     not (A or B) = not A and not B
@@ -68,6 +69,7 @@ must be true.
 
 exercise 4.6
 ============
+(optional)
 
 exercise 4.7
 ============
@@ -77,3 +79,11 @@ exercise 4.8
 
 exercise 4.9
 ============
+
+exercise 4.10
+=============
+(optional)
+
+exercise 4.11
+=============
+(optional)
