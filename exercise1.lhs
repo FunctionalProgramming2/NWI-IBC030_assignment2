@@ -23,6 +23,26 @@ minimum [2, 7, 1, 9, 6, 5]
 {definition of head}
 = 1
 
+Normal order:
+
+minimum [2, 7, 1, 9, 6, 5]
+{definition of minimum}
+= head $ insertionSort [2, 7, 1, 9, 6, 5]
+{definition of insertionSort}
+= head $ insert 2 $ insertionSort [7, 1, 9, 6, 5]
+{6x definition of insertionSort}
+= head $ insert 2 $ insert 7 $ ... $ insert 5 []
+{definition of insert}
+= head $ insert 2 $ insert 7 $ ... $ insert 6 [5]
+{definition of insert}
+= head $ insert 2 $ insert 7 $ ... $ (5 : insert 6 [])
+{... definition of insert ...}
+= head $ insert 2 $ insert 7 $ ... $ ( 1 : insert 7 $ 5 : insert 9 $ insert 6 [])
+{... definition of insert ...}
+= head $ (1 : insert 2 $ ... $ insert 6 [])
+{definition of head}
+= 1
+
 exercise 1.2
 ============
 
