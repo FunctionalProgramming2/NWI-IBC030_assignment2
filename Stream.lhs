@@ -69,3 +69,10 @@ exercise 3.3
 
 exercise 3.4
 ============
+
+> diff :: (Num elem) => Stream elem -> Stream elem
+> diff s = tail s - s
+
+> sum :: (Num elem) => Stream elem -> Stream elem
+> sum s = Cons 0 (sm 0 s)
+>     where sm n (Cons h t) = Cons m (sm m t) where m = n + h
