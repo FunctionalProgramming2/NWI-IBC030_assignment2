@@ -94,6 +94,11 @@ exercise 4.7
 exercise 4.8
 ============
 
+> static :: Position -> Value
+> static (a, b)
+>     | odd a && odd b = -100
+>     | otherwise = 100
+
 exercise 4.9
 ============
 
