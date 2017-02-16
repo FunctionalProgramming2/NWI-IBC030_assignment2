@@ -67,6 +67,9 @@ exercise 3.3
 > take 0 _ = []
 > take n (Cons x xs) = x : (take (n-1) xs)
 
+> instance (Show elem) => Show (Stream elem) where
+>     show = (++ "...") . show . take 10
+
 exercise 3.4
 ============
 
