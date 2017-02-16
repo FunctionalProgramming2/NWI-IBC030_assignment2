@@ -37,3 +37,21 @@ minCost [ (i, i + 1) | i <- [1 .. 9] ]
 < minimumCost   ∷ (size → size → With Cost size) → [size] → With Cost size
 
 < optimalChain  ∷ (size → size → With Cost size) → [size] → With Cost (With size (Tree size))
+
+--------------------------------------------------------------------------------
+author: Hendrik Werner s4549775
+
+exercise 2.1
+============
+
+exercise 2.2
+============
+
+exercise 2.3
+============
+
+exercise 2.4
+============
+
+exercise 2.5
+============
