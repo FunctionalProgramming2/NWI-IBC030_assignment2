@@ -63,5 +63,9 @@ exercise 3.2
 exercise 3.3
 ============
 
+> take :: Integer -> Stream elem -> [elem]
+> take 0 _ = []
+> take n (Cons x xs) = x : (take (n-1) xs)
+
 exercise 3.4
 ============
